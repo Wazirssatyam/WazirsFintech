@@ -1,7 +1,8 @@
 from django.contrib import admin
-from block.models import MyUser,slider,team
+from block.models import MyUser,slider,team,blog
 from django.contrib.auth.admin import UserAdmin
 # Register your models here.
+admin.site.register(blog)
 @admin.register(slider)
 class sliderAdmin(admin.ModelAdmin):
     

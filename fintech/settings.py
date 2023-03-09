@@ -34,6 +34,8 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     "django.contrib.admin",
     "block.apps.BlockConfig",
+    "ckeditor",
+    "ckeditor_uploader",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -83,7 +85,11 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
+CACHES = {
+            'default': {
+                        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+                            }
+            }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -97,7 +103,23 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
 
+# ckeditor
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+# CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
+CKEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'Basic',
+    },
+}
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+
+        
+    },
+}
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -115,8 +137,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR ,"static")]
-MEDIA_URL = "media/"
-MEDIA_ROOT = os.path.join(BASE_DIR ,"static")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR ,"media")
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

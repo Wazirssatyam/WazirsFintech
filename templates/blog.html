@@ -1,0 +1,63 @@
+{% extends  'index.html'   %}
+{% block content %}
+{% load static %}
+<section id="blog" class="blog">
+	<div class="container" data-aos="fade-up">
+
+	  <div class="row">
+		<div class="col-lg-8 entries">
+		
+		{% for post in page_obj.object_list %}
+		
+			<article class="entry entry-single">
+		{# note that the list of posts are in the page_obj.object_list not page_obj #}
+		<div class="entry-img">
+			<img src='/media/{{post.images}}' alt="" class="img-fluid">
+		  </div>
+
+		  <h2 class="entry-title">
+			<a href="blog-single.html">{{post.title}}</a>
+		  </h2>
+
+		  
+
+		  <div class="entry-content">
+			<p>
+			 {{post.summary}}
+			</p>
+			<div class="read-more">
+			  <a href="/blogss/{{post.id}}">Read More</a>
+			</div>
+		  </div>
+
+		<article>
+		
+		{% endfor %}
+	</div>
+	
+	</div>
+	{{page_obj|safe}}
+	<center>
+		{%if page_obj.has_previous %} {# whether the previous page exists #}
+			<a href="?page={{page_obj.previous_page_number}}">previous</a> {# link to the prev page #}
+		{% endif %}
+		<span>{{page_obj.number}}</span> {# the current page number #}
+		
+		{%if page_obj.has_next %} {# whether the next page exists #}
+			<a href="?page={{page_obj.next_page_number}}">next</a> {# link to the next page #}
+		{% endif %}
+	</center>
+   
+</div>
+</section>	
+</body>
+
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+
+{% endblock%}
+<script src="{% static "ckeditor/config.js" %}"></script>
+
+
+
+

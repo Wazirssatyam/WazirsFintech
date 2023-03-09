@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser,BaseUserManager
-
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 
@@ -52,7 +53,7 @@ class MyUser(AbstractUser):
 class slider(models.Model):
     caption=models.CharField(max_length=150,null=True)
     image_text=models.TextField()
-    image=models.ImageField(upload_to="media/")
+    image=models.ImageField()
     def __str__(self) :
         return self.caption
 class team(models.Model):
@@ -63,4 +64,11 @@ class team(models.Model):
     facebook=models.CharField(max_length=150,null=True)
     instagram=models.CharField(max_length=150,null=True)
     linkedn=models.CharField(max_length=150,null=True)
-    image=models.ImageField(upload_to="media/")
+    image=models.ImageField()
+class blog(models.Model):
+   title=models.CharField(max_length=150,null=True)
+   images=models.ImageField(upload_to="thumbnail/",null=True)
+   mains=RichTextUploadingField()
+   summary=models.TextField(null=True)
+   def __str__(self) :
+        return self.title

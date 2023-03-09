@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Wazir's FinTech  Bootstrap Template - Index</title>
+  <title>Wazir's FinTech.</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'LogoPNG.png' %}" rel="icon">
+  <link href="{% static 'LogoPNG.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,6 +26,10 @@
   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
   <!-- Tem'late Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" >
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <script src="https://kit.fontawesome.com/65b643e4a1.js" crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/65b643e4a1.js" crossorigin="anonymous"></script>
+ 
 
   <!-- =======================================================
   * Template Name: Wazir's FinTech  - v4.10.0
@@ -33,29 +37,216 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+<style>
+.bi-whatsapp::before {
+    content: "\f618";
+    color: white;
+}
+#company-logo{
+width: 6em;
+    height: 2em;
+}
+.button-texture{
+  border-radius: 50px 50px 50px 50px !important;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 60%), 0 6px 20px 0 rgb(0 0 0 / 15%)
+}
+.button-texture:hover{
+transform:scale(1.2);
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(63, 73, 83, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #556270;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #d9232d;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #d9232d;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+.social-medias{
+text-decoration:none !important;
+
+font-size: 10rem;
+ background-clip: text; color: transparent;
+ background-image: -webkit-linear-gradient(top, rgb(6, 5, 87), rgb(30, 150, 232)) !important;
+}
+.team .member {
+    max-height: 93%;
+    text-align: justify;
+    margin-left: 4%;
+    box-shadow: rgb(0 0 0 / 15%) -14px -6px 31px;
+    margin-bottom: 3%;
+}
+.section-title {
+    margin-top: 4%;
+    padding-bottom: 25px;
+    padding-top: 0px;
+}
+.section-title h2::after {
+    height: 3px !important;
+    margin: 4px 8px !important;
+}
+.section-title h2{
+    color: #d9232d !important;
+}
+li a{
+box-shadow: inset 0 0 0 0 #062f44;
+transition: color 1.3s ease-in-out, box-shadow .8s ease-in-out;
+}
+li a:hover {
+  color: #fff !important;
+  box-shadow: inset 200px 0 0 0 #062f44 !important;
+}
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px 10px 15px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #556270;
+    white-space: nowrap;
+    transition: 1.2s !important;
+}
+.navbar .getstarted,
+.navbar .getstarted:focus {
+background: #062f44;
+    padding: 8px 25px;
+    margin-left: 30px;
+    border-radius: 4px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.breadcrumbs {
+    padding: 20px 0;
+    background: #f8f9fa;
+    min-height: 40px;
+margin-top:10%;
+    background: rgb(0,88,108);
+    background: linear-gradient(0deg, rgba(0,88,108,1) 0%, rgba(6,47,68,1) 100%);
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    margin-block-start: 11%;
+}
+.breadcrumbs ol {
+   color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+.breadcrumbs h2 {
+    font-size: 36px;
+    font-weight: 400;
+ color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    padding-top: 10px;
+    font-size: 40px;
+}
+#header{
+padding-bottom:16px !important;
+}
+.about-points{
+padding: 4px 0 0 28px !important;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
+ <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Wazir's FinTech </a></h1>
+      <h1 class="logo me-auto"><a href="#"> <img
+            src="{% static 'wazirsFintech.png' %}"
+             id="company-logo"   alt="Sample image" data-aos="zoom-in" data-aos-delay="100" ></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="/">HOME</a></li>
 
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>WHO WE ARE</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href='team/'>Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="/about">About Us</a></li>
+	      <li><a href="/team">Team</a></li>
 
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+           {%comment%}   <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -63,22 +254,34 @@
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
-              </li>
+<li><a href="portfolio.html">Portfolio</a></li>
+              </li>{%endcomment%}
             </ul>
-          </li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-
+ </li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="/blogs">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="index.html" class="getstarted">Get Started</a></li>
+          <li ><a href="/" class="getstarted bi bi-whatsapp" style="    width: 94%;
+    font-size: 14px;
+    background-clip: text;
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(top, rgb(53, 211, 102), rgb(3, 93, 102));
+    -webkit-text-stroke-width: 0px;
+    box-shadow: rgb(53 211 102) 2px 0px 8px 0px inset;
+    border: hidden;
+    border-radius: 2%;
+    background-color: rgb(242, 242, 242);
+    justify-content: start;
+    text-decoration: none;
+    letter-spacing: 3px"> WhatsApp</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
+
+{%block  content %}
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -89,13 +292,13 @@
       <div class="carousel-inner" role="listbox">
        
     
-         {% for k in  image %}
+           {% for k in  image %}
          
              
             
            {% if forloop.counter == 1 %}  
               <!-- Slide {{forloop.counter}} -->
-              <div class="carousel-item active" style="background-image: url({% static k.image %})">
+              <div class="carousel-item active" style="background-image: url({{k.image}})">
                 <div class="carousel-container">
                   <div class="container">
                     <h2 class="animate__animated animate__fadeInDown">Welcome to <span>{{k.caption}} </span></h2>
@@ -106,7 +309,7 @@
               </div>
               {% else %} 
                 <!-- Slide {{forloop.counter}} -->
-                <div class="carousel-item" style="background-image: url({% static k.image%})">
+                <div class="carousel-item" style="background-image: url({{k.image}})">
                   <div class="carousel-container">
                     <div class="container">
                       <h2 class="animate__animated animate__fadeInDown">{{k.caption}}</h2>
@@ -137,27 +340,39 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container" style="text-align:justify">
 
         <div class="row content">
           <div class="col-lg-6">
-            <h2>Eum ipsam laborum deleniti velitena</h2>
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
-          </div>
+            <h2 style="text-align:left; letter-spacing:2px;word-spacing:2.5px;">Welcome To Wazir's FinTech</h2>
+            <p>An investor’s usual interaction with stock markets happen in terms of long-term investing or short-term
+trading activities. While both have their own pros and cons, investors usually face a lot of uncertainties in
+terms of returns as well as drawdowns
+ Long-term investing only if done right gives wealth building aspect but the holding periods are supposed to be extremely long, and drawdowns are deep and painful. Short-term trading is very difficult to manage, and majority of traders lose money in the medium-long run. Wazirs Trading Desk specializes in system-based trading strategies across various financial instruments</p>
+  <p>
+ All the strategies are well-researched and back-tested on historical data to determine the viability and performance a>risk-reward and minimize the drawdowns
+
+          </p>          
+</div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            
+           <h3>Trading System Attributes & Risk Management</h3>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
-            </ul>
+              <li><i class="ri-check-double-line"></i> Current trading systems are focused on consistent returns with least possible
+drawdowns.</li>
+              <li><i class="ri-check-double-line"></i> No naked exposure</li>
+              <li><i class="ri-check-double-line"></i> Capital is kept in Liquid Bees/debt to boost returns</li>
+<li><i class="ri-check-double-line"></i> Well-defined strategy and portfolio level SLs on daily/monthly TF</li>
+<li><i class="ri-check-double-line"></i> No leverage</li>
+<li><i class="ri-check-double-line"></i> All accounts are monitored live by trading team</li>
+<li><i class="ri-check-double-line"></i> Continuous data collection for improvements</li>
+
+            
+</ul>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+Studying historical data to find trends and market tendencies. Designing the strategies to leverage the historical data and  market tendencies based on a number of set quantifiable edges.
+We have developed a mix of strategies based on Theta Decay, Volatility mean reversion, historical data and delta neutral setups.
+
             </p>
           </div>
         </div>
@@ -399,11 +614,11 @@
 
       </div>
     </section><!-- End Portfolio Section -->
-
+{% endblock %}
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" style="background:#4a5562a8 !important">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -412,17 +627,53 @@
             <div class="footer-info">
               <h3>Wazir's FinTech </h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Unit No. 612, 6th Floor,<br> 
+Spaze Boulevard, Sector 47, <br>
+Sohna Road, Gurugram, Haryana<br><br>
+              <strong>Email :- </strong> client@wazirssecurities.com<br>
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #3b5998;"
+        href="https://www.facebook.com/wazirssecuritiespvtltd"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #55acee;"
+        href="https://twitter.com/WazirSecurities"
+        role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #dd4b39;"href="https://www.wazirssecurities.com/"
+        role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #ac2bac;"href="https://www.instagram.com/wazirssecurities/"
+        role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn text-white btn-floating m-1 button-texture"
+        style="background-color: #0082ca;"
+        href="https://in.linkedin.com/company/wazirs-securities"
+        role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
               </div>
             </div>
           </div>
@@ -433,46 +684,72 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms Of Service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy Policy</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Algo Trading</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Quantitative Research</a></li>
+	      <li><i class="bx bx-chevron-right"></i> <a href="#">Trading Consultancy</a></li>
+              </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Please Subscribe To Our Newsletter For Latest Our Updates. </p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 
           </div>
+	         <div class="footer-newsletter">
+<h4 style="text-align:center; margin-top:4%;">DISCLAIMER</h4>
+<p style="text-align:justify;color: rgba(255, 255, 255, 0.6);">The information and material contained in these pages and the terms, conditions, and
+descriptions that appear are subject to change without prior notice. Investments in equity
+shares, debentures etc, are not obligations of or guaranteed by the Wazirs Securities Private
+Limited (WSPL) and are subject to investment risks.
 
+
+The information contained, including text, graphics, links or other items are provided on an
+& available basis. Wazirs does not warrant the accuracy, adequacy or completeness
+of this information and material and expressly disclaims liability for errors or omissions in
+this information and material. No warranty of any kind, implied, express or statutory,
+including but not limited to the warranties of non-infringement of third-party rights, title,
+merchantability, fitness for a particular purpose and freedom from computer virus, is given
+in conjunction with the information and materials.
+
+
+In no event will Wazirs be liable for any damages, including without limitation direct or
+indirect, special, incidental, or consequential damages, losses or expenses arising in
+connection or use thereof or inability to use by any party, or in connection with any failure
+of performance, error, omission, interruption, defect, delay in operation or transmission,
+computer virus or line or system failure, even if Wazirs, or representatives thereof, are
+advised of the possibility of such damages, losses or expenses. Hyperlinks from and to other
+websites are at your own risk; the content, accuracy, opinions expressed, and other links
+provided by these resources are not investigated, verified, monitored, or endorsed by
+Wazirs.
+</p>
+</div>
         </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Wazir's FinTech </span></strong>. All Rights Reserved
+      <div class="copyright" style="    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;">
+        &copy; 2021 <strong><span><a style="color:#062f44;font-weight:bold;" href="https://www.wazirssecurities.com/">WAZIR'S SECURITIES</a> </span></strong>. All Rights Reserved.
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/Wazir's FinTech -free-bootstrap-theme/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+        </div>
     </div>
   </footer><!-- End Footer -->
 
@@ -488,7 +765,7 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
-
+  
 </body>
 
 </html>
